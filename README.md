@@ -11,4 +11,4 @@ COVID-Lung CosMX is an AI-powered, user-friendly, and open-access platform for a
 
 --------------------
 
-**Link:** [http://128.84.8.183](http://128.84.8.183)
+**Link:** <a href="http://128.84.8.183" target="_blank">http://128.84.8.183</a>
