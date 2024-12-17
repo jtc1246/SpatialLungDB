@@ -1,0 +1,230 @@
+/* #input-area {
+    margin-left: 1vw;
+    width: 98vw;
+    height: 7.5vw;
+    overflow: visible !important;
+    position: relative;
+} */
+
+:root {
+    --text-left-area: 1.75vw;
+    --input-left-space: 67vw;
+    --desc-left-space: 6vw;
+    --gene-left-space: 61vw;
+    --genes-input-top-space: -0.5vw;
+    --email-input-top-space: 2.5vw;
+}
+
+/* body {
+    min-height: 50vw !important;
+} */
+
+#fov-condition {
+    position: absolute;
+    left: 2.5vw;
+    top: 0;
+    width: 11vw;
+}
+
+#fov-condition > div {
+    width: 15vw;
+}
+
+#condition-text, #sample-text, #fov-text, #gene-op-text, #gene-text {
+    top: 2.75vw;
+}
+
+#condition-text {
+    left: calc(2.5vw + var(--text-left-area));
+}
+
+#fov-sample {
+    position: absolute;
+    top: 0;
+    left: 19vw;
+    width: 9vw;
+    display: none;
+}
+
+#fov-sample > div {
+    width: 9.5vw;
+    /* overflow-y: scroll; */
+}
+
+#sample-text {
+    left: calc(19vw + var(--text-left-area));
+    display: none;
+}
+
+#fov-fov {
+    position: absolute;
+    top: 0;
+    left: 31vw;
+    width: 7.5vw;
+    display: none;
+}
+
+#fov-fov > div {
+    width: 7.5vw;
+    max-height: 19vw; /* designed to be this, make one option incomplete, let user know can scroll */
+    overflow-y: scroll;
+}
+
+#fov-fov > div > a, #fov-sample > div > a, #fov-text, #sample-text, #fov-gene > div > a, #gene-text {
+    font-family: "Reddit Mono", monospace;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+#fov-text {
+    left: calc(31vw + var(--text-left-area));
+    display: none;
+}
+
+#fov-gene-op {
+    position: absolute;
+    top: 0;
+    left: 42vw;
+    width: 13vw;
+}
+
+#fov-gene-op > div {
+    width: 16.5vw;
+}
+
+#gene-op-text {
+    left: calc(42vw + var(--text-left-area));
+}
+
+#fov-submit {
+    position: absolute;
+    top: 6vw;
+    left: 25vw;
+    width: 15vw;
+}
+
+#multi-gene-input {
+    position: absolute;
+    top: var(--genes-input-top-space);
+    left: var(--input-left-space);
+}
+
+#multi-gene-email {
+    position: absolute;
+    top: var(--email-input-top-space);
+    left: var(--input-left-space);
+}
+
+#gene-input-desc {
+    top: var(--genes-input-top-space);
+    left: calc(var(--input-left-space) - var(--desc-left-space));
+}
+
+#email-input-desc {
+    top: var(--email-input-top-space);
+    left: calc(var(--input-left-space) - var(--desc-left-space));
+}
+
+.in-multi-genes {
+    display: none;
+}
+
+#fov-gene {
+    position: absolute;
+    top: 0;
+    left: var(--gene-left-space);
+    width: 8.5vw;
+    display: none;
+}
+
+#fov-gene > div {
+    overflow-y: scroll;
+    height: 26.5vw;
+    width: 12vw;
+}
+
+#gene-text {
+    left: calc(var(--gene-left-space) + var(--text-left-area));
+    display: none;
+}
+
+#img-container {
+    margin-top: 3vw;
+    width: 50vw;
+}
+
+#img-container > p {
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 1.5;
+}
+
+#multi-desc {
+    position: absolute;
+    top: 5.5vw;
+    left: 61vw;
+    font-size: 1vw;
+    width: 35vw;
+    text-align: justify;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: visible;
+    color: #9c3ca4;
+}
+
+br {
+    padding-top: 0.5vw;
+}
+
+#multi-desc > a {
+    display: inline-block;
+    vertical-align: bottom;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding-top: 0.25vw;
+}
+
+#multi-input-msg {
+    /* background-color: yellow; */
+    position: absolute;
+    top: var(--genes-input-top-space);
+    left: 88vw;
+    width: 10vw;
+    height: 5vw;
+    font-size: 1.25vw;
+    font-family: "Reddit Mono", monospace;
+    font-weight: 400;
+    line-height: var(--lib-text-single-height);
+}
+
+#multi-gene-input.too-much {
+    border-color: red;
+}
+
+#multi-gene-input.ok {
+    border-color: #00a000;
+}
+
+#too-much-genes {
+    position: absolute;
+    left: 68vw;
+    top: -1.6vw;
+    font-size: 0.8vw;
+    color: red;
+    overflow: visible;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    /* display: none; */
+}
+
+#multi-gene-email.ok {
+    border-color: #00a000;
+}
+
+#multi-gene-email.invalid {
+    border-color: red;
+}

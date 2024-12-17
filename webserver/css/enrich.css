@@ -1,0 +1,52 @@
+:root {
+    --text-left-area: 1.75vw;
+    --cell-type-left-space: 37.5vw;
+    --pathway-left-space: 2.5vw;
+}
+
+#my-cell-type {
+    top: 0;
+    position: absolute;
+    left: var(--cell-type-left-space);
+    width: 10.5vw;
+    display: none;
+}
+
+#my-cell-type > div {
+    width: 13.5vw;
+}
+
+#cell-type-text {
+    top: 2.75vw;
+    display: none;
+}
+
+#cell-type-text {
+    left: calc(var(--cell-type-left-space) + var(--text-left-area));
+}
+
+#enrich-submit {
+    top: 2vw;
+    left: 57.5vw;
+    position: absolute;
+}
+
+#my-pathway > button {
+    width: 11vw;
+}
+
+#my-pathway > div {
+    width: 32vw;
+}
+
+#my-pathway {
+    position: absolute;
+    top: 0;
+    left: var(--pathway-left-space);
+}
+
+#pathway-text {
+    top: 2.75vw;
+    left: calc(var(--pathway-left-space) + var(--text-left-area));
+    width: 30vw;
+}

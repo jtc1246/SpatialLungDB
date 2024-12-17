@@ -1,0 +1,169 @@
+:root {
+    --lib-dropdown-height: 2.125vw;
+    --lib-dropdown-normal-color: rgb(0, 137, 30);
+    --lib-dropdown-border-radius: 0.6vw;
+    --lib-dropdown-hover-color: rgb(5, 154, 37);
+    --lib-dropdown-active-color: rgb(6, 169, 41);
+    --lib-popup-background: #f9f9f9;
+    --lib-popup-hover-color: #ddd;
+    /* --lib-sumit-background: rgb(196, 0, 222); */
+    --lib-sumit-background: rgb(245, 127, 0);
+    --lib-sumit-hover-color: rgb(255, 138, 13);
+    --lib-sumit-active-color: rgb(255, 152, 43);
+    --lib-submit-height: 2.5vw;
+    --lib-text-single-height: 2.25vw;
+}
+
+/*
+========================== Dropdown Menu START ==========================
+*/
+
+.lib-dropdown {
+    display: block;
+    overflow: visible;
+    width: 15vw;
+    height: var(--lib-dropdown-height);
+}
+
+.lib-dropdown > button {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--lib-dropdown-normal-color);
+    border-radius: var(--lib-dropdown-border-radius);
+}
+
+.lib-dropdown > button > div {
+    width: 0;
+    height: 0;
+    border-left: 0.5vw solid transparent;
+    border-right: 0.5vw solid transparent;
+    border-top: 0.8vw solid #fff;
+    margin-left: 0.5vw;
+    margin-top: 0.6vw;
+}
+
+.lib-dropdown > button > p {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    line-height: var(--lib-dropdown-height);
+    font-size: 1.35vw;
+    color: #fff;
+}
+
+.lib-dropdown > button:hover {
+    cursor: pointer;
+    background-color: var(--lib-dropdown-hover-color);
+}
+
+.lib-dropdown > button:active {
+    cursor: pointer;
+    background-color: var(--lib-dropdown-active-color);
+}
+
+.lib-dropdown > div {
+    background-color: var(--lib-popup-background);
+    box-shadow: 0 0.277vw 0.555vw 0.277vw rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    width: 15vw;
+    display: none;
+    z-index: 10000;
+    /* overflow-y: scroll; */
+    /* max-height: 25vw; */
+    position: absolute;
+}
+
+.lib-dropdown > div::-webkit-scrollbar {
+    width: 0.8vw;
+    background: transparent;
+    border-radius: 1vw;
+}
+
+.lib-dropdown > div::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.6vw;
+    border: 0.25vw solid transparent;
+    background-clip: content-box;
+}
+
+.lib-dropdown > div::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.lib-ignore-firefox .lib-dropdown > div {
+    scrollbar-width: none;
+}
+
+.lib-dropdown > div.lib-ignore-dropdown-show {
+    display: block;
+}
+
+.lib-ignore-dropdown-show {
+    display: block;
+}
+
+.lib-dropdown > div a {
+    font-size: 1.125vw;
+    line-height: 2.5vw;
+    padding-left: 1vw;
+}
+
+.lib-dropdown > div a:hover {
+    cursor: pointer;
+    background-color: var(--lib-popup-hover-color);
+    border-radius: var(--lib-dropdown-border-radius);
+}
+
+/*
+========================== Dropdown Menu END ==========================
+*/
+
+
+/* Submit button */
+.lib-submit {
+    width: 8vw;
+    height: var(--lib-submit-height);
+    background-color: var(--lib-sumit-background);
+    border-radius: 2vw;
+    color: #fff;
+    font-size: 1.35vw;
+    text-align: center;
+    line-height: var(--lib-submit-height);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.lib-submit:hover {
+    cursor: pointer;
+    background-color: var(--lib-sumit-hover-color);
+}
+
+.lib-submit:active {
+    cursor: pointer;
+    background-color: var(--lib-sumit-active-color);
+}
+
+
+/* Single line input */
+.lib-text-single {
+    width: 20vw;
+    height: var(--lib-text-single-height);
+    font-size: 1.25vw;
+    border: 0.15vw solid #777;
+    border-radius: 0.6vw;
+    padding-left: 0.3vw;
+    caret-color: var(--lib-dropdown-hover-color);
+    font-family: "Reddit Mono", monospace;
+    font-weight: 400;
+}
+
+.lib-text-single::placeholder {
+    color: #989898;
+}
+

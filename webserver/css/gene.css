@@ -1,0 +1,162 @@
+:root {
+    --input-left-space: 11.5vw;
+    --desc-left-space: 9vw;
+    --genes-input-top-space: -0.5vw;
+    --input-height: 5vw;
+    --input-width: 40vw;
+    --cell-type-font-size: 1.25vw;
+    --cell-type-container-height: 2.25vw;
+    --progress-bar-width: 80vw;
+}
+
+#multi-gene-input {
+    position: absolute;
+    top: var(--genes-input-top-space);
+    left: var(--input-left-space);
+    width: var(--input-width);
+    resize: none;
+    line-height: 1.2;
+    height: var(--input-height);
+    overflow-y: scroll;
+    padding-top: 0.1vw;
+}
+
+#multi-gene-input.ok {
+    border-color: #00a000;
+}
+
+#multi-gene-input::-webkit-scrollbar {
+    width: 0.6vw;
+    background: transparent;
+    border-radius: 1vw;
+}
+
+#multi-gene-input::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.6vw;
+    border: 0.2vw solid transparent;
+    background-clip: content-box;
+}
+
+#gene-input-desc {
+    top: var(--genes-input-top-space);
+    left: calc(var(--input-left-space) - var(--desc-left-space));
+    height: var(--input-height);
+    line-height: calc(var(--input-height) - 0.2vw);
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+
+#multi-input-msg {
+    /* background-color: yellow; */
+    position: absolute;
+    top: var(--genes-input-top-space);
+    left: calc(var(--input-left-space) + var(--input-width) + 1vw);
+    width: 15vw;
+    height: 5vw;
+    font-size: 1.4375vw;
+    font-family: "Reddit Mono", monospace;
+    font-weight: 400;
+    line-height: var(--lib-text-single-height);
+    height: var(--input-height);
+    line-height: var(--input-height);
+    text-align: center;
+}
+
+#cell-type-desc {
+    left: calc(var(--input-left-space) - var(--desc-left-space));
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    top: calc(var(--genes-input-top-space) + var(--input-height) + 1.25vw);
+}
+
+.cell-types-container {
+    position: absolute;
+    top: calc(var(--genes-input-top-space) + var(--input-height) + 1.25vw);
+    left: var(--input-left-space);
+    /* background-color: yellow; */
+    width: 85vw;
+    height: var(--cell-type-container-height);
+}
+
+.cell-types-container.second {
+    top: calc(var(--genes-input-top-space) + var(--input-height) + 1.25vw + var(--cell-type-container-height) + 0.5vw);
+}
+
+.cell-types-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cell-types-container p {
+    font-size: var(--cell-type-font-size);
+    line-height: var(--cell-type-container-height);
+    margin-left: 0.4vw;
+    /* margin-right: 1.2vw; */
+}
+
+.cell-types-container input[type="checkbox"] {
+    width: var(--cell-type-font-size);
+    height: var(--cell-type-font-size);
+}
+
+.cell-types-container > label {
+    display: flex;
+    align-items: center;
+    margin-right: 1.2vw;
+    height: 100%;
+}
+
+#gene-submit {
+    position: absolute;
+    left: 73vw;
+    top: 1.25vw;
+}
+
+#result-container {
+    min-height: 30vw;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-top: 4.5vw;
+    /* background-color: yellow; */
+    display: flex;
+}
+
+#umap {
+    width: 0vw;
+    height: min-content;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    /* display: none; */
+}
+
+#img-container {
+    /* background-color: yellow; */
+    margin-left: 0vw;
+    min-height: 20vw;
+    width: 90vw;
+    /* height: max-content; */
+}
+
+#img-container > img {
+    /* display: block; */
+}
+
+#bar {
+    box-sizing: content-box;
+    overflow: hidden;
+    padding-left: 5vw;
+    width: calc(var(--progress-bar-width) * var(--progress-bar-ratio, 0));
+    padding-top: 10vw;
+    height: 0.5vw;
+    display: none;
+}
+
+#bar > div {
+    height: inherit;
+    width: var(--progress-bar-width);
+    /* background-color: #00b800; */
+    background: linear-gradient(to left, #006000 0%, #006800 2.5%, #007000 5%, #007800 7.5%, #008000 10%, #008800 15%, #009000 20%, #009800 30%, #00a000 40%, #00a800 50%, #00b000 60%, #00b800 70%, #00c000 85%, #00c800 100%);
+    border-radius: 10vw;
+}

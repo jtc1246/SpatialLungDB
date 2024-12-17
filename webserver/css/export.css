@@ -1,0 +1,32 @@
+#export {
+    width: 11vw;
+    height: 6vw;
+    position: fixed;
+    /* background-color: yellow; */
+    /* margin-left: -0.6vw;
+    margin-top: -0.6vw; */
+    z-index: 100;
+    display: none;
+    background-color: #fff;
+    box-sizing: content-box;
+    border-radius: 1vw;
+    border: 0.3vw solid rgb(230, 0, 255);
+    box-shadow: 0.8vw 0.8vw 0.8vw rgba(0, 0, 0, 0.7);
+}
+
+.export-item {
+    display: block;
+    font-size: 1.25vw;
+    height: 3vw;
+    width: 100%;
+    line-height: 3vw;
+    border-radius: 0.7vw; /* must minus the border width */
+    padding-left: 1vw;
+    box-sizing: border-box;
+    /* background-color: yellow; */
+    cursor: pointer;
+}
+
+.export-item:hover {
+    background-color: #ddd;
+}

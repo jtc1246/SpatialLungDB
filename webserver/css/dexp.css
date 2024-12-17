@@ -1,0 +1,49 @@
+:root {
+    --text-left-area: 1.75vw;
+    --cell-type-left-space: 2.5vw;
+    --condition-left-space: 17vw;
+}
+
+#my-cell-type {
+    top: 0;
+    position: absolute;
+    left: var(--cell-type-left-space);
+    width: 10.5vw;
+}
+
+#my-cell-type > div {
+    width: 13.5vw;
+}
+
+#dexp-condition {
+    top: 0;
+    position: absolute;
+    left: var(--condition-left-space);
+    width: 10.5vw;
+}
+
+#dexp-condition > div {
+    width: 10vw;
+}
+
+#cell-type-text, #condition-text {
+    top: 2.75vw;
+}
+
+#cell-type-text {
+    left: calc(var(--cell-type-left-space) + var(--text-left-area));
+}
+
+#condition-text {
+    left: calc(var(--condition-left-space) + var(--text-left-area));
+}
+
+#dexp-submit {
+    top: 2vw;
+    left: 38vw;
+    position: absolute;
+}
+
+#img-container {
+    width: 60vw;
+}

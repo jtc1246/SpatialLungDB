@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrichment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moderustic:wght@300..800&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="/css/reset.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/lib.css" rel="stylesheet">
+  <link href="/css/enrich.css" rel="stylesheet">
+  <script src="/js/lib.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/enrich.js"></script>
+  <!--$jtc.unique.replacer$<link rel="prefetch" href="/html/dexp.html">
+  <link rel="prefetch" href="/html/fov.html">
+  <link rel="prefetch" href="/html/gene.html">
+  <link rel="prefetch" href="/html/home.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/image.html">$jtc.unique.replacer$-->
+</head>
+
+<body class="about">
+  <header>
+    <div id="title-text">
+      <h1>COVID-Lung <p>CosMX</p></h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/ai_chat.html">Chat with AI</a>
+        <a href="/html/image.html">Image</a>
+        <a href="/html/fov.html">Image of FOV</a>
+        <a href="/html/gene.html">Gene Expression</a>
+        <a href="/html/enrich.html" class="current">Enrichment</a>
+        <a href="/html/dexp.html">Differential Exp</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+      </div>
+    </nav>
+  </header>
+  <div id="input-area">
+    <div id="my-pathway" class="lib-dropdown">
+      <button>
+        <p>Pathway</p>
+        <div></div>
+      </button>
+      <div>
+        <a>Pro-inflammatory</a>
+        <a>Senescence</a>
+        <a>Senescence-associated secretory phenotype (SASP)</a>
+        <a>Pro-fibrotic gene set</a>
+        <a>Anti-fibrotic gene set</a>
+      </div>
+    </div>
+    <p id="pathway-text" class="selected-option">None</p>
+    <div id="my-cell-type" class="lib-dropdown">
+      <button>
+        <p>Cell Type</p>
+        <div></div>
+      </button>
+      <div>
+      </div>
+    </div>
+    <p id="cell-type-text" class="selected-option">None</p>
+    <button class="lib-submit" id="enrich-submit">Submit</button>
+  </div>
+  <div id="img-container">
+    <img src="">
+    <p>Please select pathway and cell type</p>
+  </div>
+</body>
+<footer>
+  <p>
+    Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
+  </p>
+</footer>
+
+</html>

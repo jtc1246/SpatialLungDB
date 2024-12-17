@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moderustic:wght@300..800&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <!-- <link href="/css/style.css" rel="stylesheet"> -->
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/ai.css" rel="stylesheet">
+  <link href="/css/export.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/ai.js"></script>
+  <!--$jtc.unique.replacer$<link rel="prefetch" href="/html/dexp.html">
+  <link rel="prefetch" href="/html/enrich.html">
+  <link rel="prefetch" href="/html/fov.html">
+  <link rel="prefetch" href="/html/home.html">
+  <link rel="prefetch" href="/html/gene.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/image.html">$jtc.unique.replacer$-->
+</head>
+
+<body class="home" style="display:none;">
+  <div id="full-screen-image">
+    <img src="">
+  </div>
+  <div id="export">
+    <a class="export-item" id="export-png">Export as PNG</a>
+    <a class="export-item" id="export-pdf">Export as PDF</a>
+  </div>
+  <div id="start-new-conversation-wrapper">
+    <p id="start-new-conversation">Start&nbsp;&nbsp;&nbsp;&nbsp;new conversation</p>
+  </div>
+  <header>
+    <div id="title-text">
+      <h1>COVID-Lung <p>CosMX</p></h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/ai_chat.html" class="current">Chat with AI</a>
+        <a href="/html/image.html">Image</a>
+        <a href="/html/fov.html">Image of FOV</a>
+        <a href="/html/gene.html">Gene Expression</a>
+        <a href="/html/enrich.html">Enrichment</a>
+        <a href="/html/dexp.html">Differential Exp</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="left" id="ai-container">
+    </div>
+    <div class="empty"></div>
+    <div class="right" id="chatarea">
+      <!-- <h2>Expression Visualization</h2> -->
+      <div id="chat">
+        <div id="chat-title">Chat with AI assistant</div>
+        <div id="chat-messages">
+          <div class="start-end" id="start-line"></div>
+          <div class="start-end" id="end-line"></div>
+        </div>
+        <div id="chat-rcmd">
+          <p class="">What is the function of this website?</p>
+          <p>How about the cell composition of the spatial lung data?</p>
+          <p>Could you show me an example FOV for COVID19 lung?</p>
+          <p>How about the markers’ expression of macrophage?</p>
+          <p >How about the inflammation in macrophage of COVID lung?</p>
+          <p>What are the DEGs in Macrophages?</p>
+        </div>
+        <div id="chat-input">
+          <button id="clear-history">Clear History</button>
+          <textarea id="chat-input-text" placeholder="Chat with the AI assistant, ask anything you want to know "></textarea>
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

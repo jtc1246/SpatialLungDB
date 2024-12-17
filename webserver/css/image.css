@@ -1,0 +1,177 @@
+:root {
+    --main-img-border: 0.3vw;
+    --square-border-color: rgb(255, 255, 72);
+}
+
+#main-flex {
+    display: flex;
+    margin-left: 5vw;
+    height: 60vw;
+    margin-bottom: 2vw;
+    overflow: visible;
+}
+
+#images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40vw;
+    overflow: hidden;
+    height: 50vw;
+    grid-template-rows: 50% 50%;
+}
+
+.content-wrapper {
+    position: relative;
+}
+
+.content-wrapper > div > * {
+    position: absolute;
+}
+
+.content-wrapper img {
+    /* display: none; */
+    width: 80%;
+    left: 10%;
+    top: 2.5vw;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.content-wrapper p {
+    font-size: 1.25vw;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    z-index: 105;
+    cursor: pointer;
+}
+
+.content-wrapper p:nth-of-type(1){
+    /* color: blue; */
+    top: 0.5vw;
+    left: 1vw;
+    font-weight: 600;
+}
+
+.content-wrapper p:nth-of-type(2){
+    /* color: blue; */
+    top: 0.75vw;
+    font-size: 1vw;
+    left: 6vw;
+}
+
+.border-only {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: transparent;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+
+.border-only.mouse-in {
+    border: 0.2vw solid rgb(240, 156, 0);
+}
+
+
+#main-img-self {
+    width: 100%;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+#main-img {
+    position: absolute;
+    left: calc(0px - var(--main-img-border));
+    top: 3.5vw;
+    width: 100%;
+    border: var(--main-img-border) solid #ff7ece;
+    overflow: visible;
+    box-sizing: content-box;
+    border-radius: var(--main-img-border);
+}
+
+#main-img.not-shown {
+    border: 0;
+}
+
+#main-img-wrapeer {
+    width: 40vw;
+    height: 100%;
+    margin-left: 5vw;
+    position: relative;
+    overflow: visible;
+}
+
+#main-img > div {
+    width: 100%;
+    height: 100%;
+}
+
+#main-img-inside {
+    position: relative;
+    background-color: #000;
+}
+
+.main-img-part {
+    position: absolute;
+    background-color: #000;
+    -webkit-user-drag: none;
+    user-select: none;
+    z-index: 5;
+}
+
+.main-fov-square {
+    z-index: 10;
+    position: absolute;
+    box-sizing: content-box;
+    left: calc(var(--x-start) - var(--square-border) * 0.5);
+    top: calc(var(--y-start) - var(--square-border) * 0.5);
+    width: calc(var(--x-end) - var(--x-start) - var(--square-border));
+    height: calc(var(--y-end) - var(--y-start) - var(--square-border));
+    border: 0px solid var(--square-border-color);
+    border-width: var(--square-border);
+    line-height: max(calc(var(--y-end) * 0.75 - var(--y-start) * 0.75 - var(--square-border) * 0.75), calc(var(--text-size) * 1.5));
+    font-size: var(--text-size);
+}
+
+.main-fov-square > div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    line-height: inherit;
+    font-size: inherit;
+}
+
+.main-fov-square > div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.main-fov-square > div > p {
+    font-size: inherit;
+    font-family: "Reddit Mono", monospace;
+    color: var(--square-border-color);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: inherit;
+    font-weight: var(--text-weight);
+    user-select: none;
+}
+
+.img-desc {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    padding-left: 2vw;
+    display: none;
+    color: rgb(16, 141, 0);
+}
+
+#img-desc-first {
+    margin-top: -1vw;
+}

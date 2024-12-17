@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image of FOV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moderustic:wght@300..800&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="/css/reset.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/lib.css" rel="stylesheet">
+  <link href="/css/fov.css" rel="stylesheet">
+  <script src="/js/lib.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/fov.js"></script>
+  <!--$jtc.unique.replacer$<link rel="prefetch" href="/html/dexp.html">
+  <link rel="prefetch" href="/html/enrich.html">
+  <link rel="prefetch" href="/html/gene.html">
+  <link rel="prefetch" href="/html/home.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/image.html">$jtc.unique.replacer$-->
+</head>
+
+<body class="about">
+  <header>
+    <div id="title-text">
+      <h1>COVID-Lung <p>CosMX</p></h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/ai_chat.html">Chat with AI</a>
+        <a href="/html/image.html">Image</a>
+        <a href="/html/fov.html" class="current">Image of FOV</a>
+        <a href="/html/gene.html">Gene Expression</a>
+        <a href="/html/enrich.html">Enrichment</a>
+        <a href="/html/dexp.html">Differential Exp</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+      </div>
+    </nav>
+  </header>
+  <div id="input-area">
+    <div id="fov-condition" class="lib-dropdown">
+      <button>
+        <p>Condition</p>
+        <div></div>
+      </button>
+      <div>
+      </div>
+    </div>
+    <p id="condition-text" class="selected-option">None</p>
+    <div id="fov-sample" class="lib-dropdown">
+      <button>
+        <p>Sample</p>
+        <div></div>
+      </button>
+      <div>
+      </div>
+    </div>
+    <p id="sample-text" class="selected-option">None</p>
+    <div id="fov-fov" class="lib-dropdown">
+      <button>
+        <p>FOV</p>
+        <div></div>
+      </button>
+      <div>
+      </div>
+    </div>
+    <p id="fov-text" class="selected-option">None</p>
+    <div id="fov-gene-op" class="lib-dropdown">
+      <button>
+        <p>Gene options</p>
+        <div></div>
+      </button>
+      <div>
+        <a>None (with all genes)</a>
+        <a>Single gene</a>
+        <a>Multiple genes (at most 3)</a>
+      </div>
+    </div>
+    <p id="gene-op-text" class="selected-option">None (with all genes)</p>
+    <!-- TODO: update it to searched dropdown -->
+    <div id="fov-gene" class="lib-dropdown">
+      <button>
+        <p>Gene</p>
+        <div></div>
+      </button>
+      <div>
+      </div>
+    </div>
+    <p id="gene-text" class="selected-option">None</p>
+    <p class="in-multi-genes" id="too-much-genes">
+      <!-- at most 3 genes are allowed -->
+    </p>
+    <p class="input-desc in-multi-genes" id="gene-input-desc">Genes: </p>
+    <input type="text" class="lib-text-single in-multi-genes" id="multi-gene-input" placeholder="INS, TOP2A" spellcheck="false">
+    <p class="in-multi-genes" id="multi-input-msg">
+      <!-- 3 / 4 matched -->
+    </p>
+    <p class="input-desc in-multi-genes" id="email-input-desc">Email: </p>
+    <input type="text" class="lib-text-single in-multi-genes" id="multi-gene-email" placeholder="abcd1234@example.com">
+    <p class="in-multi-genes" id="multi-desc">Note: 
+      <br><a>1.</a> In multiple-gene mode, it will take a long time to generate the image (about 10 minutes), please only use this when necessary. 
+      <br><a>2.</a> You need to input your email, we will send you an email when it finishes.
+      <br><a>3.</a> You can input at most 3 genes.
+      <br><a>4.</a> Use comma (,) to separate.</p>
+    <button class="lib-submit" id="fov-submit">Submit</button>
+  </div>
+  <div id="img-container">
+    <img src="">
+    <p></p>
+  </div>
+  
+</body>
+<footer>
+  <p>
+    Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
+  </p>
+</footer>
+
+</html>

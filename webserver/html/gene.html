@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gene Expression</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moderustic:wght@300..800&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="/css/reset.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/lib.css" rel="stylesheet">
+  <link href="/css/gene.css" rel="stylesheet">
+  <script src="/js/lib.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/gene.js"></script>
+  <!--$jtc.unique.replacer$<link rel="prefetch" href="/html/dexp.html">
+  <link rel="prefetch" href="/html/enrich.html">
+  <link rel="prefetch" href="/html/fov.html">
+  <link rel="prefetch" href="/html/home.html">
+  <link rel="prefetch" href="/html/help.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/image.html">$jtc.unique.replacer$-->
+</head>
+
+<body class="about">
+  <header>
+    <div id="title-text">
+      <h1>COVID-Lung <p>CosMX</p></h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/ai_chat.html">Chat with AI</a>
+        <a href="/html/image.html">Image</a>
+        <a href="/html/fov.html">Image of FOV</a>
+        <a href="/html/gene.html" class="current">Gene Expression</a>
+        <a href="/html/enrich.html">Enrichment</a>
+        <a href="/html/dexp.html">Differential Exp</a>
+        <a href="/html/help.html">Help</a>
+        <a href="/html/about.html">About</a>
+      </div>
+    </nav>
+  </header>
+  <div id="input-area">
+    <p class="input-desc in-multi-genes" id="gene-input-desc">Genes: </p>
+    <textarea class="lib-text-single in-multi-genes" id="multi-gene-input" placeholder="INS, TOP2A" spellcheck="false"></textarea>
+    <p class="in-multi-genes" id="multi-input-msg"></p>
+    <button class="lib-submit" id="gene-submit">Submit</button>
+    <p class="input-desc" id="cell-type-desc">Cell types: </p>
+    <div class="cell-types-container">
+      <label>
+        <input type="checkbox">
+        <p>Lymphocytes1</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Macrophage</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Fibroblast</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Smooth muscle cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Endothelial cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Alveolar type II cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Monocyte</p>
+      </label>
+    </div>
+    <div class="cell-types-container second">
+      <label>
+        <input type="checkbox">
+        <p>Plasma cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Red blood cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Lymphocytes2</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Alveolar type I cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Basal cell</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Neutrophil</p>
+      </label>
+      <label>
+        <input type="checkbox">
+        <p>Unknown</p>
+      </label>
+    </div>
+  </div>
+  <div id="result-container">
+    <img id="umap" src="/imgs/umap.png">
+    <div id="img-container">
+      <img src="">
+      <p></p>
+      <div id="bar">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <p>
+    Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
+  </p>
+</footer>
+
+</html>

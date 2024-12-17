@@ -1,0 +1,89 @@
+main {
+    width: calc(100% - 20vw);
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+
+h1 {
+    font-size: 2.5vw;
+    text-align: center;
+    padding-bottom: 1.5vw;
+}
+
+.section-title {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+}
+
+.sub-title {
+    padding-bottom: 0.75vw;
+    font-size: 1.625vw;
+    color: #444;
+    padding-left: 2.5vw;
+}
+
+.sub-sub-title {
+    padding-bottom: 0.75vw;
+    font-size: 1.625vw;
+    color: #686868;
+    padding-left: 2.5vw;
+}
+
+.mytext {
+    font-size: 1.375vw;
+    padding-left: 2.5vw;
+    line-height: 1.25;
+    color: #686868;
+    padding-bottom: 0.75vw;
+    text-align: justify;
+}
+
+.mytext > a {
+    font-size: 1.375vw;
+    color: blue;
+    border-bottom: 0.15vw dotted blue;
+}
+
+.mytext > a:hover {
+    text-decoration: underline;
+    color: #ed8600;
+    border-bottom: 0.15vw dotted #ed8600;
+}
+
+.mytext.last {
+    padding-bottom: 1.25vw;
+}
+
+.myimg {
+    /* margin-top: 0.25vw; */
+    margin-left: 2.5vw;
+    width: 77.5%;
+    box-sizing: border-box;
+    border: 0.2vw solid orange;
+    border-radius: 0.5vw;
+    margin-bottom: 0.75vw;
+}
+
+span.delete {
+    display: inline;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: line-through;
+}
+
+.mytext > a.delete {
+    /* color: #686868; */
+    border: 0;
+    text-decoration: line-through;
+}
+
+.mytext > a.delete:hover {
+    text-decoration: line-through;
+    color: blue;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+
+}

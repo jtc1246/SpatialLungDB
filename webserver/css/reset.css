@@ -1,0 +1,81 @@
+/* To disable the behavior of most elements */
+* {
+    line-height: 1;
+    font-size: 2vw;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    text-decoration: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    display: block;
+    list-style: none;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: 400;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-flow: nowrap;
+    vertical-align: top;
+    caret-color: #000;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* To disable the behavior in specific status */
+*:visited, *:active, *:hover, *:focus, *:focus-within, *:focus-visible, *:checked {
+    color: #000;
+    outline: 0;
+    text-decoration: none;
+}
+
+/* I haven't encountered this, but I see this in other reset css */
+*::before {
+    content: '';
+    display: none;
+}
+
+*::after {
+    content: '';
+    display: none;
+}
+
+/* Head will show because it is set to block previously */
+head {
+    display: none;
+}
+
+/* Set to overflow hidden previously, but overflow-y should be scrollable */
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Same to head */
+script {
+    display: none;
+}
+
+style {
+    display: none;
+}
+
+/* To disable the influence of scroll bar in width, that will affect the consistency of using vw */
+main {
+    width: 100vw;
+}
+
+/* To hide the scroll bar of whole page */
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

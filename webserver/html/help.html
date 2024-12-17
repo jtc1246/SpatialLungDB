@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gene Expression</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moderustic:wght@300..800&family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="/css/html5reset.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/help.css" rel="stylesheet">
+  <script src="/js/nav.js"></script>
+  <!--$jtc.unique.replacer$<link rel="prefetch" href="/html/dexp.html">
+  <link rel="prefetch" href="/html/enrich.html">
+  <link rel="prefetch" href="/html/fov.html">
+  <link rel="prefetch" href="/html/home.html">
+  <link rel="prefetch" href="/html/gene.html">
+  <link rel="prefetch" href="/html/about.html">
+  <link rel="prefetch" href="/html/image.html">$jtc.unique.replacer$-->
+</head>
+
+<body class="about">
+  <header>
+    <div id="title-text">
+      <h1>COVID-Lung <p>CosMX</p></h1>
+    </div>
+    <nav>
+      <div id="nav">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/ai_chat.html">Chat with AI</a>
+        <a href="/html/image.html">Image</a>
+        <a href="/html/fov.html">Image of FOV</a>
+        <a href="/html/gene.html">Gene Expression</a>
+        <a href="/html/enrich.html">Enrichment</a>
+        <a href="/html/dexp.html">Differential Exp</a>
+        <a href="/html/help.html" class="current">Help</a>
+        <a href="/html/about.html">About</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Tutorials</h1>
+    <p class="section-title">1. Introduction</p>
+    <p class="mytext">
+      Navigation bar is on the top, including home page, expression page, enrichment page, help page and about page. You can click the corresponding link to enter the page you want to visit.
+    </p>
+    <p class="mytext">
+      <a href="/html/index.html">Home page:</a> The main page of the website, which provides a brief introduction of the website and the database, and a chatting box with our AI assistant.
+    </p>
+    <p class="mytext">
+      <a href="/html/expression.html">Expression page:</a> The page for you to visualize the expression of a single gene, or multiple genes. You can see the violin plot of a single gene, or the comparison of multiple genes in a dot plot.
+    </p>
+    <p class="mytext">
+      <a href="/html/enrichment.html">Enrichment page:</a> This page is to show the enrichment of several pathways, including beta cell pathways, cell death pathways, specific pathways.
+    </p>
+    <p class="mytext">
+      <a href="/html/advanced_analysis.html">Advanced enrichment analysis page:</a> This page is to show the enrichment of customised pathways, which is defined by a set of genes.
+    </p>
+    <p class="mytext last">
+      There is also <a href="/html/help.html">Help page</a> and <a href="/html/about.html">About page</a> to show the tutorials and basic information of this website, and <a href="/html/hormones.html">Small molecules page</a> to show the information of small molecules.
+    </p>
+    <p class="section-title">2. Expression</p>
+    <p class="mytext">
+      This page is for you to visualize the expression of a single gene, or multiple genes. You can see the violin plot of a single gene, or the comparison of multiple genes in a dot plot.
+      First you need to select whether you want to see one gene or multiple genes. If you want to see single gene, click "Gene", if you want to see multiple genes, click "Multiple Genes".
+    </p>
+    <img src="/imgs/exp1.png" class="myimg">
+    <p class="sub-title">(1) Single gene</p>
+    <p class="mytext">
+      Input the gene id in the textbox, and then click "Search" button. After several seconds, the violin plot of the gene will be displayed.
+    </p>
+    <p class="mytext">
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive) Note that not all gene ids have the expression (can generate the image) here. If that gene doesn't have the expression, it will show an error message.
+    </p>
+    <img src="/imgs/exp2.png" class="myimg">
+    <p class="sub-title">(2) Multiple genes</p>
+    <p class="mytext">
+      You need to input the gene ids in the textbox, separated by space, comma, or new line, and then click "Submit" button. After several seconds, the dot plot of these genes will be displayed.
+    </p>
+    <p class="mytext">
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. Here almost all gene ids can generate the image successfully, including the gene ids that don't have the expression.
+    </p>
+    <img src="/imgs/exp3.png" class="myimg">
+    <p class="section-title">3. Enrichment</p>
+    <p class="mytext">
+      This page is to show the enrichment plot of several pathways, including beta cell pathways, cell death pathways, specific pathways, and also customised pathways with your own gene list.
+      First you need to select one of the three options (Beta cell pathways, Cell death pathways, Specific pathways) on the left side.
+    </p>
+    <img src="/imgs/enrich6.png" class="myimg">
+    <p class="sub-title">(1) Beta cell pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich2.png" class="myimg">
+    <p class="sub-title">(2) Cell death pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich3.png" class="myimg">
+    <p class="sub-title">(3) Specific pathways</p>
+    <p class="mytext">
+      Click "Select a pathway" button, and then select a pathway from the dropdown menu. You can also type in the textbox to search for the pathway name.
+      Then click "Submit", the enrichment of it will be displayed later.
+    </p>
+    <img src="/imgs/enrich4.png" class="myimg">
+    <p class="section-title">4. Advanced Enrichment Analysis</p>
+    <p class="mytext">
+      This page is to show the enrichment of customised pathways, which is defined by a set of genes.
+    </p>
+    <p class="mytext">
+      Input the gene ids in the textbox, separated by space, comma, or new line, 
+      and then click "Launch" button. 
+      Gene ids should look like INS, TOP2A, PDX1, AL691432.2, etc. (case insensitive)
+      After several seconds, the enrichment of these genes will be displayed.
+    </p>
+    <img src="/imgs/gsea.png" class="myimg">
+    <!-- <p class="section-title">5. Home page (chatting area)</p> -->
+
+
+
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; Chen lab at Weill Cornell Medicine 2024 All rights reserved.
+    </p>
+  </footer>
+</body>
+
+</html>
